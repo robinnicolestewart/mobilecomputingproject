@@ -10,15 +10,35 @@ import UIKit
 
 class MedicalEventTable: UITableViewController {
 
-    func sayHello() { print("Hello from define button") }
+    fileprivate let definedEvents:[String] = ["Headache", "Stomach Pain", "Chest Pain"]
+    
+    func defineButton() {
+        print("define button")
+        let storyboard: UIStoryboard = UIStoryboard(name: "MedicalEvent", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "DefineEventNav")
+        present(nextVC, animated: true, completion: nil)
+    }
+    func editButton() {
+        print("edit button")
+        // let storyboard: UIStoryboard = UIStoryboard(name: "MedicalEvent", bundle: nil)
+        // let nextVC = storyboard.instantiateViewController(withIdentifier: "DefineEventNav")
+        // present(nextVC, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Medical Events"
-        let define_button:UIBarButtonItem = UIBarButtonItem(title:"Define",
+        
+        let edit_button:UIBarButtonItem = UIBarButtonItem(title:"Edit",
+                                                          style: .plain,
+                                                          target: self,
+                                                          action: #selector(MedicalEventTable.editButton))
+        let define_button:UIBarButtonItem = UIBarButtonItem(title:"Define New",
                                                             style: .plain,
                                                             target: self,
-                                                            action: #selector(MedicalEventTable.sayHello))
+                                                            action: #selector(MedicalEventTable.defineButton))
+        
+        self.navigationItem.leftBarButtonItem = edit_button
         self.navigationItem.rightBarButtonItem = define_button
     }
 
@@ -36,60 +56,29 @@ class MedicalEventTable: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // This should return the number of defined events
-        return 4
+        return definedEvents.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MedicalEventCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "event_cell", for: indexPath) as! MedicalEventCell
-        
-        cell.cellTitle.text = "test \(indexPath.row)"
-        
+        cell.cellTitle.text = definedEvents[indexPath.row]
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        
+        if segue.identifier == "eventSegue" {
+            if let destination = segue.destination as? EventInput {
+                if let idx = tableView.indexPathForSelectedRow?.row {
+                    destination.eTitle = definedEvents[idx]
+                }
+            }
+        }
     }
-    */
-
 }

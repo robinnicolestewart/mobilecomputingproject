@@ -19,6 +19,11 @@
 		2B3AC8FD1E80648500CF5BD0 /* MedicalEventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */; };
 		2B3AC9001E80674F00CF5BD0 /* MedicalEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */; };
 		2B3AC9021E8074E700CF5BD0 /* AlphaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC9011E8074E700CF5BD0 /* AlphaMainViewController.swift */; };
+		2B3AC9041E8081C700CF5BD0 /* DefineEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC9031E8081C700CF5BD0 /* DefineEventView.swift */; };
+		2B3AC9061E8081E100CF5BD0 /* AttributeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC9051E8081E100CF5BD0 /* AttributeInformationView.swift */; };
+		2B8F52A81E81C69400F3CDAE /* EventInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F52A71E81C69400F3CDAE /* EventInput.swift */; };
+		2B8F52AA1E81CA6800F3CDAE /* EventSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F52A91E81CA6800F3CDAE /* EventSaver.swift */; };
+		2B8F52AC1E81CCE600F3CDAE /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F52AB1E81CCE600F3CDAE /* Attribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalEventTable.swift; sourceTree = "<group>"; };
 		2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalEventCell.swift; sourceTree = "<group>"; };
 		2B3AC9011E8074E700CF5BD0 /* AlphaMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaMainViewController.swift; sourceTree = "<group>"; };
+		2B3AC9031E8081C700CF5BD0 /* DefineEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefineEventView.swift; sourceTree = "<group>"; };
+		2B3AC9051E8081E100CF5BD0 /* AttributeInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeInformationView.swift; sourceTree = "<group>"; };
+		2B8F52A71E81C69400F3CDAE /* EventInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInput.swift; sourceTree = "<group>"; };
+		2B8F52A91E81CA6800F3CDAE /* EventSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSaver.swift; sourceTree = "<group>"; };
+		2B8F52AB1E81CCE600F3CDAE /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +151,24 @@
 		2B3AC8FE1E8066EC00CF5BD0 /* MedicalEvent */ = {
 			isa = PBXGroup;
 			children = (
+				2B3AC9051E8081E100CF5BD0 /* AttributeInformationView.swift */,
+				2B3AC9031E8081C700CF5BD0 /* DefineEventView.swift */,
+				2B8F52A71E81C69400F3CDAE /* EventInput.swift */,
 				2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */,
 				2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */,
 				2B3AC8FA1E805F9900CF5BD0 /* MedicalEvent.storyboard */,
+				2B8F52AD1E81CE1000F3CDAE /* Attributes */,
+				2B8F52A91E81CA6800F3CDAE /* EventSaver.swift */,
 			);
 			name = MedicalEvent;
+			sourceTree = "<group>";
+		};
+		2B8F52AD1E81CE1000F3CDAE /* Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F52AB1E81CCE600F3CDAE /* Attribute.swift */,
+			);
+			name = Attributes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,12 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8F52AA1E81CA6800F3CDAE /* EventSaver.swift in Sources */,
 				1BEC537B1E7F7508001145E1 /* ViewController.swift in Sources */,
 				1BEC53791E7F7508001145E1 /* AppDelegate.swift in Sources */,
 				2B3AC9001E80674F00CF5BD0 /* MedicalEventCell.swift in Sources */,
 				1BEC53811E7F7508001145E1 /* Mobile_Computing_Project_App.xcdatamodeld in Sources */,
+				2B3AC9041E8081C700CF5BD0 /* DefineEventView.swift in Sources */,
 				2B3AC9021E8074E700CF5BD0 /* AlphaMainViewController.swift in Sources */,
+				2B8F52AC1E81CCE600F3CDAE /* Attribute.swift in Sources */,
+				2B3AC9061E8081E100CF5BD0 /* AttributeInformationView.swift in Sources */,
 				2B3AC8FD1E80648500CF5BD0 /* MedicalEventTable.swift in Sources */,
+				2B8F52A81E81C69400F3CDAE /* EventInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
