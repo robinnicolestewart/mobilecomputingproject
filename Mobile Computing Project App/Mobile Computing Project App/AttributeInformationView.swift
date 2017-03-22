@@ -10,7 +10,7 @@ import UIKit
 
 class AttributeInformationView: UIViewController {
 
-    fileprivate let attributeTypes:[String] = ["Pain Scale", "Pain Type", ]
+    fileprivate let attributeTypes:[String] = ["Pain Scale", "Pain Type", "Food Before", ]
     
     @IBOutlet weak var attributeName: UITextField!
     @IBOutlet weak var attributePicker: UIPickerView!
@@ -20,9 +20,10 @@ class AttributeInformationView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Define an Attribute"
+        self.title = "Create an Attribute"
 
-        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {

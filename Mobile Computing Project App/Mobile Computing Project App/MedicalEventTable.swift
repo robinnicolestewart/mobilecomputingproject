@@ -14,14 +14,14 @@ class MedicalEventTable: UITableViewController {
     
     func defineButton() {
         print("define button")
-        let storyboard: UIStoryboard = UIStoryboard(name: "MedicalEvent", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(withIdentifier: "DefineEventNav")
-        present(nextVC, animated: true, completion: nil)
+        let storyboard:UIStoryboard = UIStoryboard(name: "MedicalEvent", bundle: nil)
+        let eventVC = storyboard.instantiateViewController(withIdentifier: "DefineEvent")
+        self.navigationController!.pushViewController(eventVC, animated: true)
     }
     func editButton() {
         print("edit button")
         // let storyboard: UIStoryboard = UIStoryboard(name: "MedicalEvent", bundle: nil)
-        // let nextVC = storyboard.instantiateViewController(withIdentifier: "DefineEventNav")
+        // let nextVC = storyboard.instantiateViewController(withIdentifier: "DefineEvent")
         // present(nextVC, animated: true, completion: nil)
     }
     

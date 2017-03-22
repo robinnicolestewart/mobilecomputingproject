@@ -10,7 +10,6 @@ import Foundation
 
 class EventSaver {
     
-    
     // this function will create an event entity with the correct name and attributes
     // name is passed in as a string, and attributes are passed as tupled in a list as follows:
     //      args:[(att1Name, att1Type), (att2Name, att2Type), ... (attNName, attNType)]
