@@ -8,12 +8,12 @@
 
 import UIKit
 
-class DefineEventView: UIViewController {
+class DefineEventView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var alertController:UIAlertController? = nil
     
     @IBOutlet weak var eventName: UITextField!  // This will be the name of the medical event
-    var attributeList:[AnyObject] = []          // This will contain attributes added, starts with none when defining new event
+    var attributeList:[(String, String)] = []          // This will contain attributes added, starts with none when defining new event
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var attributeTable: UITableView!
@@ -44,36 +44,70 @@ class DefineEventView: UIViewController {
             let backItem = UIBarButtonItem()
             backItem.title = "Cancel"
             navigationItem.backBarButtonItem = backItem
+            
+            if let destination = segue.destination as? AttributeInformationView {
+                destination.currentAttibuteList = self.attributeList
+            }
         }
     }
     
     func saveEvent() {
         // Check to see if there are any attributes or if an event name is entered
         if self.eventName.text == "" {
-            self.alertController = UIAlertController(title: "Hey!", message: "You must have a name for your medical event",
-                                                     preferredStyle: UIAlertControllerStyle.alert)
-            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
-                (action:UIAlertAction) in print("Ok pressed");
-            }
-            self.alertController!.addAction(OKAction)
-            self.present(self.alertController!, animated: true, completion:nil)
+            let message: String = "You must have a name for your attribute to save"
+            displayMessage(message)
             return
         } else if self.attributeList.count == 0 {
-            self.alertController = UIAlertController(title: "Listen!", message: "You must have at least one attribute for your event",
-                                                     preferredStyle: UIAlertControllerStyle.alert)
-            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
-                (action:UIAlertAction) in print("Ok pressed");
-            }
-            self.alertController!.addAction(OKAction)
-            self.present(self.alertController!, animated: true, completion:nil)
+            let message: String = "You must have at least one attribute defined to save"
+            displayMessage(message)
             return
         }
         
         print("Event type Saved!")
+        // save function for event goes HERE
+        
         // Return to previous view which is Medical Event Table
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    //MARK: Table view data source
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.attributeList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        
+        // Configure the cell...
+        let index:Int = indexPath.row
+        let attributeName: String = self.attributeList[index].0
+        let attributeType: String = self.attributeList[index].1
+        cell.textLabel?.text = attributeName
+        cell.detailTextLabel?.text = attributeType
+        
+        return cell
+    }
+    
+    func displayMessage(_ message: String) {
+        DispatchQueue.main.async {
+            self.alertController =
+                UIAlertController(title: "Whoa", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
+            }
+            
+            self.alertController!.addAction(okAction)
+            
+            self.present(self.alertController!, animated: true, completion:nil)
+        }
+    }
+
+    // dismisses keyboard on touch outside of keyboard
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)

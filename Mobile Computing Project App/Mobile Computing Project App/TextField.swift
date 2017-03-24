@@ -9,15 +9,11 @@
 import Foundation
 
 class TextField: Attribute {
-    var type:String
+    var name:String
     var inputType:AnyObject
     
-    init(type:String, inputType:AnyObject) {
-        self.type = type
+    init(name:String, inputType:AnyObject) {
+        self.name = name
         self.inputType = inputType
-    }
-    
-    class func addInputToView(view: AnyObject) {
-        
     }
 }

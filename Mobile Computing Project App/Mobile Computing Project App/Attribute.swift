@@ -10,8 +10,6 @@ import Foundation
 
 protocol Attribute {
     // this protocol is simple and sets up the basic needs for a medical event attribute
-    var type:String {get set}  // type will be referred to as attributeType in other places
-    var inputType:AnyObject {get set} // the input type may be a text box,
-    
-    static func addInputToView(view: AnyObject)
+    var name:String {get set}  // Name of the attribute
+    var inputType:AnyObject {get set} // Some UI that takes in data e.g. a text input
 }
