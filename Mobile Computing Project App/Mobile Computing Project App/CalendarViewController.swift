@@ -9,26 +9,37 @@
 import UIKit
 import JTAppleCalendar
 
-class CalendarViewController: UIViewController {
+class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // We cache our colors because we do not want to be creating
-    // a new color every time a cell is displayed. We do not want a laggy
-    // scrolling calendar.
     
+    // Set month dictionary
+    let monthString:NSDictionary = [1:"January", 2:"February", 3:"March", 4:"April", 5:"May", 6:"June",
+                                    7:"July", 8:"August", 9:"September", 10:"October", 11:"November", 12:"December"]
+    // Cache colors to reduce lag
     let white = UIColor.white
     let black = UIColor.black
     let gray = UIColor.gray
+    
+    var selectedDate: Date? // Will be used to load events for that day
+    var selectedEvents:[AnyObject] = DataManager.loadEventsByDate(Date())  //LOAD FUNCTION GOES HERE
 
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var eventTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        eventTable.dataSource = self
+        eventTable.delegate = self
         
         calendarView.dataSource = self
         calendarView.delegate = self
         calendarView.registerCellViewXib(file: "CellView") // Registering your cell is manditory
         calendarView.registerHeaderView(xibFileNames: ["MonthHeader"])
-        self.title = "nav bar title"
+        calendarView.scrollToDate(Date())   // set initial month to current month
+        calendarView.selectDates([Date()])  // set intial selected date to current date
+        
+        self.title = "Calendar"
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +56,9 @@ class CalendarViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // MARK: - Calendar
     
     // Function to handle the text color of the calendar
     func handleCellTextColor(view: JTAppleDayCellView?, cellState: CellState) {
@@ -72,20 +86,42 @@ class CalendarViewController: UIViewController {
         if cellState.isSelected {
             myCustomCell.selectedView.layer.cornerRadius =  25
             myCustomCell.selectedView.isHidden = false
+            
+            self.selectedDate = myCustomCell.date
+            self.selectedEvents = DataManager.loadEventsByDate(myCustomCell.date!)
+            
+            // Update tableview to include stuff
         } else {
             myCustomCell.selectedView.isHidden = true
         }
     }
 
+    //MARK: - Table View
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.selectedEvents.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        
+        return cell
+    }
 }
 
+
+// More calendar stuff
 extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDelegate {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
-        
-        let startDate = formatter.date(from: "2017 01 01")! // You can use date generated from a formatter
-        let endDate = formatter.date(from: "2017 12 31")!          // You can also use dates created from this function
+        // let startDate = Date()
+        let startDate = formatter.date(from: "2006 01 01")! // You can use date generated from a formatter
+        let endDate = formatter.date(from: "2018 12 31")!          // You can also use dates created from this function
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
                                                  numberOfRows: 6, // Only 1, 2, 3, & 6 are allowed
@@ -101,6 +137,7 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
         
         // Setup Cell text
         myCustomCell.dayLabel.text = cellState.text
+        myCustomCell.date = date
         
         handleCellTextColor(view: cell, cellState: cellState)
         handleCellSelection(view: cell, cellState: cellState)
@@ -124,6 +161,6 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
     func calendar(_ calendar: JTAppleCalendarView, willDisplaySectionHeader header: JTAppleHeaderView, range: (start: Date, end: Date), identifier: String) {
         var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: range.0)
         let headerCell = (header as? MonthHeaderView)
-        headerCell?.title.text = "\(dateComponents.month!)/\(dateComponents.year!)"
+        headerCell?.title.text = "\(self.monthString[dateComponents.month!]!) \(dateComponents.year!)"
     }
 }

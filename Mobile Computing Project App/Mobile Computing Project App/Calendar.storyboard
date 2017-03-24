@@ -67,6 +67,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="calendarView" destination="2Xq-x4-www" id="suP-CK-YMO"/>
+                        <outlet property="eventTable" destination="PMu-dq-Ggw" id="39G-io-z2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqM-UD-XDO" userLabel="First Responder" sceneMemberID="firstResponder"/>

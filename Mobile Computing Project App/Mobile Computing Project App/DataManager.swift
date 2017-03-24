@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EventSaver {
+class DataManager {
     
     // this function will create an event entity with the correct name and attributes
     // name is passed in as a string, and attributes are passed as tupled in a list as follows:
@@ -20,5 +20,9 @@ class EventSaver {
         print("Save the event of type \(name)")
         
         return 0
+    }
+    
+    class func loadEventsByDate(_ date: Date) -> [AnyObject] {
+        return []
     }
 }

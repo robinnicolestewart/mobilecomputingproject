@@ -34,7 +34,7 @@
                             <constraint firstItem="hfV-5t-M12" firstAttribute="centerX" secondItem="LG0-dV-rxg" secondAttribute="centerX" id="GBd-KK-fce"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="EdI-23-2eD"/>
+                    <tabBarItem key="tabBarItem" title="Medical Event" id="EdI-23-2eD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aV-gE-FjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +65,7 @@
                             <constraint firstItem="cRg-PR-gnS" firstAttribute="centerY" secondItem="8vs-JY-pyF" secondAttribute="centerY" id="sCI-JB-7XE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item3" id="LkB-Cc-ttE"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="LkB-Cc-ttE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kl6-Qw-VmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,7 +96,7 @@
                             <constraint firstItem="Pj5-Cg-TpC" firstAttribute="centerY" secondItem="Foe-hY-bVf" secondAttribute="centerY" id="xZe-G5-K9H"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="EWy-ye-gal"/>
+                    <tabBarItem key="tabBarItem" title="Medicine" id="EWy-ye-gal"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4P-N7-gl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +127,7 @@
                             <constraint firstItem="1Gp-yO-7gD" firstAttribute="centerY" secondItem="X7A-82-rBo" secondAttribute="centerY" id="KCi-Xp-3Im"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6UC-bO-mSB"/>
+                    <tabBarItem key="tabBarItem" title="Options" id="6UC-bO-mSB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhT-vN-zOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +136,6 @@
         <!--Data-->
         <scene sceneID="iFC-TN-vrm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LnV-Cr-bhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Data" id="eDA-Pz-CIC" customClass="DataVC" customModule="Mobile_Computing_Project_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rLT-ra-FHG"/>
@@ -159,15 +158,16 @@
                             <constraint firstItem="qQN-I5-p29" firstAttribute="centerY" secondItem="TYi-Ni-gsW" secondAttribute="centerY" id="J8w-eJ-Cnr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="zTx-vm-cIh"/>
+                    <tabBarItem key="tabBarItem" title="Data" id="zTx-vm-cIh"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LnV-Cr-bhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1103.2" y="657.12143928035982"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--TabVC-->
         <scene sceneID="sj3-FV-fkb">
             <objects>
-                <tabBarController id="fWd-kP-YoT" sceneMemberID="viewController">
+                <tabBarController id="fWd-kP-YoT" customClass="TabVC" customModule="Mobile_Computing_Project_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="WJh-wE-ARv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
