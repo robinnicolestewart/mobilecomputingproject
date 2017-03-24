@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class DataManager {
     
@@ -16,9 +17,13 @@ class DataManager {
     // where att*Name is a string with the name of the attribute e.g. "Pain Scale"
     // and att*Type is a string with the name of the attribute type.
     // Attribute types will be predefined in separate class
-    class func saveEvent(name:String, args:[AnyObject]) -> Int {
+    class func saveEventTemplate(name:String, atts:[(String, String)]) -> Int {
         print("Save the event of type \(name)")
         
+        return 0
+    }
+    
+    class func saveEventData(eventType: String, data:[(String, String)]) -> Int {
         return 0
     }
     
