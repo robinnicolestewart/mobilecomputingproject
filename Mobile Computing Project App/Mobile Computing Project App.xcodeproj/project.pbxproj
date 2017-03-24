@@ -15,6 +15,17 @@
 		1BEC53861E7F7508001145E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEC53841E7F7508001145E1 /* LaunchScreen.storyboard */; };
 		1BEC53911E7F7508001145E1 /* Mobile_Computing_Project_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC53901E7F7508001145E1 /* Mobile_Computing_Project_AppTests.swift */; };
 		1BEC539C1E7F7508001145E1 /* Mobile_Computing_Project_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC539B1E7F7508001145E1 /* Mobile_Computing_Project_AppUITests.swift */; };
+		2B3AC8FB1E805F9900CF5BD0 /* MedicalEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FA1E805F9900CF5BD0 /* MedicalEvent.storyboard */; };
+		2B3AC8FD1E80648500CF5BD0 /* MedicalEventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */; };
+		2B3AC9001E80674F00CF5BD0 /* MedicalEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */; };
+		2B3AC9021E8074E700CF5BD0 /* AlphaMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC9011E8074E700CF5BD0 /* AlphaMainViewController.swift */; };
+		2B3AC9041E8081C700CF5BD0 /* DefineEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC9031E8081C700CF5BD0 /* DefineEventView.swift */; };
+		2B3AC9061E8081E100CF5BD0 /* AttributeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC9051E8081E100CF5BD0 /* AttributeInformationView.swift */; };
+		2B44B3401E849E31004A1A91 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44B33F1E849E31004A1A91 /* utility.swift */; };
+		2B681F1C1E832D4E00BCF8F1 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B681F1B1E832D4D00BCF8F1 /* TextField.swift */; };
+		2B8F52A81E81C69400F3CDAE /* EventInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F52A71E81C69400F3CDAE /* EventInput.swift */; };
+		2B8F52AA1E81CA6800F3CDAE /* EventSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F52A91E81CA6800F3CDAE /* EventSaver.swift */; };
+		2B8F52AC1E81CCE600F3CDAE /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F52AB1E81CCE600F3CDAE /* Attribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		1BEC53971E7F7508001145E1 /* Mobile Computing Project AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Computing Project AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEC539B1E7F7508001145E1 /* Mobile_Computing_Project_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Computing_Project_AppUITests.swift; sourceTree = "<group>"; };
 		1BEC539D1E7F7508001145E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B3AC8FA1E805F9900CF5BD0 /* MedicalEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalEvent.storyboard; sourceTree = "<group>"; };
+		2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalEventTable.swift; sourceTree = "<group>"; };
+		2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalEventCell.swift; sourceTree = "<group>"; };
+		2B3AC9011E8074E700CF5BD0 /* AlphaMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaMainViewController.swift; sourceTree = "<group>"; };
+		2B3AC9031E8081C700CF5BD0 /* DefineEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefineEventView.swift; sourceTree = "<group>"; };
+		2B3AC9051E8081E100CF5BD0 /* AttributeInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeInformationView.swift; sourceTree = "<group>"; };
+		2B44B33F1E849E31004A1A91 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
+		2B681F1B1E832D4D00BCF8F1 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		2B8F52A71E81C69400F3CDAE /* EventInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInput.swift; sourceTree = "<group>"; };
+		2B8F52A91E81CA6800F3CDAE /* EventSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSaver.swift; sourceTree = "<group>"; };
+		2B8F52AB1E81CCE600F3CDAE /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +121,9 @@
 		1BEC53771E7F7508001145E1 /* Mobile Computing Project App */ = {
 			isa = PBXGroup;
 			children = (
+				2B3AC8FE1E8066EC00CF5BD0 /* MedicalEvent */,
 				1BEC53781E7F7508001145E1 /* AppDelegate.swift */,
+				2B3AC9011E8074E700CF5BD0 /* AlphaMainViewController.swift */,
 				1BEC537A1E7F7508001145E1 /* ViewController.swift */,
 				1BEC537C1E7F7508001145E1 /* Main.storyboard */,
 				1BEC53821E7F7508001145E1 /* Assets.xcassets */,
@@ -126,6 +150,31 @@
 				1BEC539D1E7F7508001145E1 /* Info.plist */,
 			);
 			path = "Mobile Computing Project AppUITests";
+			sourceTree = "<group>";
+		};
+		2B3AC8FE1E8066EC00CF5BD0 /* MedicalEvent */ = {
+			isa = PBXGroup;
+			children = (
+				2B3AC9051E8081E100CF5BD0 /* AttributeInformationView.swift */,
+				2B3AC9031E8081C700CF5BD0 /* DefineEventView.swift */,
+				2B8F52A71E81C69400F3CDAE /* EventInput.swift */,
+				2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */,
+				2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */,
+				2B3AC8FA1E805F9900CF5BD0 /* MedicalEvent.storyboard */,
+				2B8F52AD1E81CE1000F3CDAE /* Attributes */,
+				2B8F52A91E81CA6800F3CDAE /* EventSaver.swift */,
+				2B44B33F1E849E31004A1A91 /* utility.swift */,
+			);
+			name = MedicalEvent;
+			sourceTree = "<group>";
+		};
+		2B8F52AD1E81CE1000F3CDAE /* Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F52AB1E81CCE600F3CDAE /* Attribute.swift */,
+				2B681F1B1E832D4D00BCF8F1 /* TextField.swift */,
+			);
+			name = Attributes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +287,7 @@
 				1BEC53861E7F7508001145E1 /* LaunchScreen.storyboard in Resources */,
 				1BEC53831E7F7508001145E1 /* Assets.xcassets in Resources */,
 				1BEC537E1E7F7508001145E1 /* Main.storyboard in Resources */,
+				2B3AC8FB1E805F9900CF5BD0 /* MedicalEvent.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8F52AA1E81CA6800F3CDAE /* EventSaver.swift in Sources */,
 				1BEC537B1E7F7508001145E1 /* ViewController.swift in Sources */,
 				1BEC53791E7F7508001145E1 /* AppDelegate.swift in Sources */,
+				2B681F1C1E832D4E00BCF8F1 /* TextField.swift in Sources */,
+				2B3AC9001E80674F00CF5BD0 /* MedicalEventCell.swift in Sources */,
 				1BEC53811E7F7508001145E1 /* Mobile_Computing_Project_App.xcdatamodeld in Sources */,
+				2B3AC9041E8081C700CF5BD0 /* DefineEventView.swift in Sources */,
+				2B3AC9021E8074E700CF5BD0 /* AlphaMainViewController.swift in Sources */,
+				2B8F52AC1E81CCE600F3CDAE /* Attribute.swift in Sources */,
+				2B3AC9061E8081E100CF5BD0 /* AttributeInformationView.swift in Sources */,
+				2B44B3401E849E31004A1A91 /* utility.swift in Sources */,
+				2B3AC8FD1E80648500CF5BD0 /* MedicalEventTable.swift in Sources */,
+				2B8F52A81E81C69400F3CDAE /* EventInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +567,7 @@
 				1BEC53A21E7F7508001145E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BEC53A31E7F7508001145E1 /* Build configuration list for PBXNativeTarget "Mobile Computing Project AppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +576,7 @@
 				1BEC53A51E7F7508001145E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BEC53A61E7F7508001145E1 /* Build configuration list for PBXNativeTarget "Mobile Computing Project AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +585,7 @@
 				1BEC53A81E7F7508001145E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
