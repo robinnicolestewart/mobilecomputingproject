@@ -18,10 +18,9 @@ class AlphaMainViewController: UIViewController {
     }
     
     @IBAction func goToRobinSB(_ sender: Any) {
-        print("This doesn't link anywhere yet")
-        // let storyboard = UIStoryboard(name: "name_of_Robin_SB", bundle: nil)
-        // let controller = storyboard.instantiateViewController(withIdentifier: "name_of_initial_VC") as UIViewController
-        // self.present(controller, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Calendar") as UIViewController
+        self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func goToWilliamSB(_ sender: Any) {
