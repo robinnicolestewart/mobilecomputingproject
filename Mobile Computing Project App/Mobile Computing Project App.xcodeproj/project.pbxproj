@@ -23,6 +23,8 @@
 		1BEC539C1E7F7508001145E1 /* Mobile_Computing_Project_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEC539B1E7F7508001145E1 /* Mobile_Computing_Project_AppUITests.swift */; };
 		281D29B0D426A6A47B9B58A6 /* Pods_Mobile_Computing_Project_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462492C6BC49F9834BF64482 /* Pods_Mobile_Computing_Project_App.framework */; };
 		2B2F26EC1E85C3330024461B /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F26EB1E85C3330024461B /* TabVC.swift */; };
+		2B2F26F11E85D6C60024461B /* LoadedEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F26F01E85D6C60024461B /* LoadedEventCell.swift */; };
+		2B2F26F31E85DA5A0024461B /* ShowEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2F26F21E85DA5A0024461B /* ShowEventVC.swift */; };
 		2B3AC8FB1E805F9900CF5BD0 /* MedicalEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FA1E805F9900CF5BD0 /* MedicalEvent.storyboard */; };
 		2B3AC8FD1E80648500CF5BD0 /* MedicalEventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */; };
 		2B3AC9001E80674F00CF5BD0 /* MedicalEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */; };
@@ -80,6 +82,8 @@
 		1BEC539B1E7F7508001145E1 /* Mobile_Computing_Project_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Computing_Project_AppUITests.swift; sourceTree = "<group>"; };
 		1BEC539D1E7F7508001145E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B2F26EB1E85C3330024461B /* TabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		2B2F26F01E85D6C60024461B /* LoadedEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadedEventCell.swift; sourceTree = "<group>"; };
+		2B2F26F21E85DA5A0024461B /* ShowEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventVC.swift; sourceTree = "<group>"; };
 		2B3AC8FA1E805F9900CF5BD0 /* MedicalEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalEvent.storyboard; sourceTree = "<group>"; };
 		2B3AC8FC1E80648500CF5BD0 /* MedicalEventTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalEventTable.swift; sourceTree = "<group>"; };
 		2B3AC8FF1E80674F00CF5BD0 /* MedicalEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalEventCell.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				1B0968F71E85531700DBF79D /* CellView.swift */,
 				1B0968FD1E85956100DBF79D /* MonthHeaderView.swift */,
 				1B0968FF1E859C6100DBF79D /* CalendarEventsTableViewController.swift */,
+				2B2F26F01E85D6C60024461B /* LoadedEventCell.swift */,
+				2B2F26F21E85DA5A0024461B /* ShowEventVC.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -460,12 +466,14 @@
 				1BEC53811E7F7508001145E1 /* Mobile_Computing_Project_App.xcdatamodeld in Sources */,
 				1B0968F81E85531700DBF79D /* CellView.swift in Sources */,
 				2BC825C31E85B33300FD8784 /* DataVC.swift in Sources */,
+				2B2F26F11E85D6C60024461B /* LoadedEventCell.swift in Sources */,
 				2B3AC9041E8081C700CF5BD0 /* DefineEventView.swift in Sources */,
 				2BC825CC1E85B37100FD8784 /* OptionsVC.swift in Sources */,
 				1B0968FE1E85956100DBF79D /* MonthHeaderView.swift in Sources */,
 				2B8F52AC1E81CCE600F3CDAE /* Attribute.swift in Sources */,
 				2B3AC9061E8081E100CF5BD0 /* AttributeInformationView.swift in Sources */,
 				2B44B3401E849E31004A1A91 /* utility.swift in Sources */,
+				2B2F26F31E85DA5A0024461B /* ShowEventVC.swift in Sources */,
 				2B3AC8FD1E80648500CF5BD0 /* MedicalEventTable.swift in Sources */,
 				2B8F52A81E81C69400F3CDAE /* EventInput.swift in Sources */,
 			);

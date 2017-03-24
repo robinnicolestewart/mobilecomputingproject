@@ -20,8 +20,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     let black = UIColor.black
     let gray = UIColor.gray
     
-    var selectedDate: Date? // Will be used to load events for that day
-    var selectedEvents:[AnyObject] = DataManager.loadEventsByDate(Date())  //LOAD FUNCTION GOES HERE
+    var selectedDate: Date = Date() // Will be used to load events for that day
+    var selectedEvents:[AnyObject] = DataManager.loadEventsByDate(Date())
 
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var eventTable: UITableView!
@@ -87,10 +87,11 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
             myCustomCell.selectedView.layer.cornerRadius =  25
             myCustomCell.selectedView.isHidden = false
             
-            self.selectedDate = myCustomCell.date
+            self.selectedDate = myCustomCell.date!
             self.selectedEvents = DataManager.loadEventsByDate(myCustomCell.date!)
             
             // Update tableview to include stuff
+            self.eventTable.reloadData()
         } else {
             myCustomCell.selectedView.isHidden = true
         }
@@ -107,9 +108,15 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
         
         return cell
+    }
+    
+    // New Note actione
+    @IBAction func createNote(_ sender: Any) {
+        print("new note")
+        //go to new note view controller
     }
 }
 
