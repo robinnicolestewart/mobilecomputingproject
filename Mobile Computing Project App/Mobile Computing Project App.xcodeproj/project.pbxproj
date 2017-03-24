@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016353E81E85C19C008958BD /* OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016353E71E85C19C008958BD /* OptionTableViewController.swift */; };
+		016353EA1E85C4F3008958BD /* optionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016353E91E85C4F3008958BD /* optionsStoryboard.storyboard */; };
+		016353EC1E85DA5E008958BD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016353EB1E85DA5E008958BD /* SettingsVC.swift */; };
+		016353EE1E85DA6C008958BD /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016353ED1E85DA6C008958BD /* AboutVC.swift */; };
 		1B0968F81E85531700DBF79D /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0968F71E85531700DBF79D /* CellView.swift */; };
 		1B0968FA1E8562A400DBF79D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0968F91E8562A400DBF79D /* CalendarViewController.swift */; };
 		1B0968FC1E85945F00DBF79D /* MonthHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0968FB1E85945F00DBF79D /* MonthHeader.xib */; };
@@ -57,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016353E71E85C19C008958BD /* OptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionTableViewController.swift; sourceTree = "<group>"; };
+		016353E91E85C4F3008958BD /* optionsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = optionsStoryboard.storyboard; sourceTree = "<group>"; };
+		016353EB1E85DA5E008958BD /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		016353ED1E85DA6C008958BD /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		128AFF607E21E26A856D2EC7 /* Pods-Mobile Computing Project App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile Computing Project App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile Computing Project App/Pods-Mobile Computing Project App.debug.xcconfig"; sourceTree = "<group>"; };
 		1B0968F71E85531700DBF79D /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellView.swift; path = ../CellView.swift; sourceTree = "<group>"; };
 		1B0968F91E8562A400DBF79D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +131,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016353E41E85BE58008958BD /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				016353E71E85C19C008958BD /* OptionTableViewController.swift */,
+				016353E91E85C4F3008958BD /* optionsStoryboard.storyboard */,
+				016353EB1E85DA5E008958BD /* SettingsVC.swift */,
+				016353ED1E85DA6C008958BD /* AboutVC.swift */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
 		1B211B111E854FD8006573D9 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +181,7 @@
 		1BEC53771E7F7508001145E1 /* Mobile Computing Project App */ = {
 			isa = PBXGroup;
 			children = (
+				016353E41E85BE58008958BD /* Options */,
 				1BEC53781E7F7508001145E1 /* AppDelegate.swift */,
 				1B211B111E854FD8006573D9 /* Calendar */,
 				2B3AC8FE1E8066EC00CF5BD0 /* MedicalEvent */,
@@ -357,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016353EA1E85C4F3008958BD /* optionsStoryboard.storyboard in Resources */,
 				1BEC53861E7F7508001145E1 /* LaunchScreen.storyboard in Resources */,
 				1BEC53831E7F7508001145E1 /* Assets.xcassets in Resources */,
 				1BEC537E1E7F7508001145E1 /* Main.storyboard in Resources */,
@@ -442,16 +463,19 @@
 				2BC825CA1E85B36900FD8784 /* MedicineVC.swift in Sources */,
 				1B0969001E859C6100DBF79D /* CalendarEventsTableViewController.swift in Sources */,
 				2BC825C61E85B34E00FD8784 /* MedicalEventVC.swift in Sources */,
+				016353EE1E85DA6C008958BD /* AboutVC.swift in Sources */,
 				1BEC53791E7F7508001145E1 /* AppDelegate.swift in Sources */,
 				2B681F1C1E832D4E00BCF8F1 /* TextField.swift in Sources */,
 				2B3AC9001E80674F00CF5BD0 /* MedicalEventCell.swift in Sources */,
 				1BEC53811E7F7508001145E1 /* Mobile_Computing_Project_App.xcdatamodeld in Sources */,
 				1B0968F81E85531700DBF79D /* CellView.swift in Sources */,
+				016353EC1E85DA5E008958BD /* SettingsVC.swift in Sources */,
 				2BC825C31E85B33300FD8784 /* DataVC.swift in Sources */,
 				2B3AC9041E8081C700CF5BD0 /* DefineEventView.swift in Sources */,
 				2BC825CC1E85B37100FD8784 /* OptionsVC.swift in Sources */,
 				1B0968FE1E85956100DBF79D /* MonthHeaderView.swift in Sources */,
 				2B8F52AC1E81CCE600F3CDAE /* Attribute.swift in Sources */,
+				016353E81E85C19C008958BD /* OptionTableViewController.swift in Sources */,
 				2B3AC9061E8081E100CF5BD0 /* AttributeInformationView.swift in Sources */,
 				2B44B3401E849E31004A1A91 /* utility.swift in Sources */,
 				2B3AC8FD1E80648500CF5BD0 /* MedicalEventTable.swift in Sources */,

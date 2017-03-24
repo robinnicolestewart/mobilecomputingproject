@@ -14,11 +14,11 @@ class OptionsVC: UIViewController {
         super.viewDidLoad()
 
         // Instantiate the separate storyboard for Options section and load it
-        // let storyboard = UIStoryboard(name: "Options", bundle: nil)
-        // let controller = storyboard.instantiateViewController(withIdentifier: "OptionNav") as UIViewController
-        // addChildViewController(controller)
-        // view.addSubview(controller.view)
-        // controller.didMove(toParentViewController: self)
+        let storyboard = UIStoryboard(name: "optionsStoryboard", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "OptionsNav") as UIViewController
+        addChildViewController(controller)
+        view.addSubview(controller.view)
+        controller.didMove(toParentViewController: self)
     }
 
     override func didReceiveMemoryWarning() {
