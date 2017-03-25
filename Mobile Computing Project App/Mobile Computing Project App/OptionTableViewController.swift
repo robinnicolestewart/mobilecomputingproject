@@ -19,6 +19,10 @@ class OptionTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.title = "Options"
+        var colors : [String:UIColor] = ["white": UIColor.white, "orange":
+        UIColor.orange, "blue": UIColor.blue]
+        Style.loadTheme()
+        //self.tableView.backgroundColor = colors[Style.giveColor()]
     }
 
     override func didReceiveMemoryWarning() {

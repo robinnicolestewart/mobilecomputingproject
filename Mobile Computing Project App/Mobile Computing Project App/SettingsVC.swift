@@ -24,11 +24,17 @@ class SettingsVC: UIViewController {
     
     @IBAction func saveBtn(_ sender: Any) {
         if currentAction == 0{
+            Style.whiteTheme()
+            //Style.setColor("white")
             
         }else if currentAction == 1{
-            
+            Style.orangeTheme()
+            //Style.setColor("orange")
+ 
         }else{
-            
+            Style.blueTheme()
+            //Style.setColor("blue")
+
         }
     }
     override func didReceiveMemoryWarning() {
